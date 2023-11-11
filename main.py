@@ -16,6 +16,7 @@ while running:
         if event.type == pygame.QUIT:
             running = False
 
+    game.update()
     game.draw()
 
     pygame.display.flip()
