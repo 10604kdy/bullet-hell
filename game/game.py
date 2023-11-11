@@ -1,7 +1,7 @@
 from constants.image import BACKGROUND_IMAGE
 from game.player import Player
 from game.enemy import Enemy
-
+import random
 class Game:
     def __init__(self, screen):
         self.screen = screen
@@ -12,6 +12,9 @@ class Game:
 
         for enemy in self.enemies:
             enemy.update()
+
+        if random.randint(1,100)<3:
+            self.enemies.append(Enemy())
 
 
 
